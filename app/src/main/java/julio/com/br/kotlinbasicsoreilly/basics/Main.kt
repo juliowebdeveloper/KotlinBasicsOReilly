@@ -7,6 +7,5 @@ fun main(args: Array<String>){
     println(message)
     someAditional("Name")
 
-    //TODO: VIDEO 14
 
 }

@@ -16,6 +16,8 @@ fun main(args: Array<String>) {
         "EMPTY" //If the condition matches return a number, else returns a string
     }
 
+
+
     println(result)
 
 

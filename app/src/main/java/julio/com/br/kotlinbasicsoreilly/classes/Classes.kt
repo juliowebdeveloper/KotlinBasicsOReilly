@@ -24,6 +24,28 @@ class Customer(var id:Int, var name:String = ""){ //Tudo passado aqui vira o con
 }
 
 class Person(var id: Int, var name: String, val yearOfBirth: Int){
+
+
+    //Visibility
+    /*public - default and anywhere accessible
+    *
+    *
+    * Top Level Declarations:
+    * private - Available inside file containing declaration
+    *
+    * internal - Anywhere in the same module - Gradle Module, Maven Module etc
+    *
+    * Classes:
+    *
+    * private - Class members
+    *
+    * protected - Same classes and their subclasses
+    *
+    * internal - Any client inside the module*
+    */
+
+
+
     val age:Int
         get() = Calendar.getInstance().get(Calendar.YEAR ) - yearOfBirth //Custom getter for age
 
@@ -34,6 +56,11 @@ class Person(var id: Int, var name: String, val yearOfBirth: Int){
             }
             field = value //Field é um campo especial reconhecido que possui a propriedade em si (um backfield)
         }
+
+    fun personAsString(): String{
+       return "Id: $id Name: $name"
+    }
+
 
 }
 
@@ -54,4 +81,6 @@ fun main(args: Array<String>) {
     person.socialSecurityNumber = "SNdsadsad"
     println(person.age)
     println(person.socialSecurityNumber)
+    println(person.personAsString())
+
 }

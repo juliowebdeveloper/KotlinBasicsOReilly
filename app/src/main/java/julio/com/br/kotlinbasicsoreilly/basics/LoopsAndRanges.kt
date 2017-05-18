@@ -47,7 +47,7 @@ fun main(args: Array<String>) {
     }while (x >10)
 
     loop@for(i  in 1..100){ //@loop is a label que pode ser definida
-        for(j in 1..100){
+        loop2@for(j in 1..100){
             println("J: $j")
             if(j % i==0){
                 println("Equals")
