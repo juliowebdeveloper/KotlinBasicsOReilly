@@ -1,5 +1,7 @@
 package julio.com.br.kotlinbasicsoreilly.classes;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by mira on 18/05/2017.
  */
@@ -19,6 +21,17 @@ public class CustomerJava {
                 '}';
     }
 
+
+    public void prettyPrint(){
+        System.out.printf("id: %d - Name: %s%\n", id, name);
+    }
+
+    public @NotNull String neverNull(){ return "This is never null"; } //Jetbrains annotation
+
+    public String sometimesNull(){
+            return "A string";
+
+    }
 
     @Override
     public boolean equals(Object o) {

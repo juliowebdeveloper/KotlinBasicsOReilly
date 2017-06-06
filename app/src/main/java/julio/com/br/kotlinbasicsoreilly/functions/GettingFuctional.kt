@@ -8,6 +8,7 @@ fun operation(x:Int, y:Int, op: (Int, Int) -> Int): Int {
         return op(x, y)
 }
 
+
 fun operation(x:Int, y: Int, op:(Int) ->Unit) {
 
 }
@@ -21,7 +22,7 @@ fun unaryOperation(x:Int,  op: (Int) -> Int){//Recebe como parametro uma functio
 
 fun unaryOperation2(op: (Int) -> Int){}
 
-fun transaction(db: Database, code: () ->Unit){ //Function que recebe o database e um codigo a ser executado
+fun transaction(db: Database, code: () -> Unit){ //Function que recebe o database e um codigo a ser executado
                 //Executa o codigo em try e no finally commita a partir do database class
     try{
         code()
@@ -57,6 +58,7 @@ fun main(args: Array<String>) {
     val db = Database()
 
     transaction(db){
+        println("hello")
         //Interact with database
         //Recebe esse codigo e no finally faz o commit da classe database, acaba criando uma keyword transaction
         //Micro - DSL são maneiras de se criar codigos que possuem semanticas mais significativas em torno do negocio
