@@ -3,6 +3,7 @@ package julio.com.br.kotlinbasicsoreilly.interop;
 import java.io.IOException;
 
 import julio.com.br.kotlinbasicsoreilly.classes.CustomerKotlin;
+import julio.com.br.kotlinbasicsoreilly.classes.CustomerKotlinKt;
 import julio.com.br.kotlinbasicsoreilly.classes.Status;
 
 /**
@@ -28,6 +29,14 @@ public class TalkingToKotlin {
         customerKotlin.changeStatus(Status.Current);
         customerKotlin.changeStatus(); //Overloaded version
         customerKotlin.preferential();
+
+        //Calling a top level function
+        UtilityClass.prefix("some", "value"); //Filename.functionName
+
+        UtilityClass.getCopyRightYear(); //Filename.property
+        int x = UtilityClass.CopyRightYear2; //Field access
+
+        CustomerKotlinKt.extension(customerKotlin);//Acessando uma extension function da classe CustomerKotlin passando uma instancia daquela classe
 
     }
 }

@@ -35,6 +35,7 @@ enum class Priority(val value: Int){
 
 fun main(args: Array<String>) {
     val priority = Priority.NORMAL
+    
 
     println(priority)
     println(priority.value)
