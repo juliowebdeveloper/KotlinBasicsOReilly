@@ -7,7 +7,7 @@ class Request2(val method: String, val query: String, val contentType: String)
 
 class Response2(var content: String, var status: Status2){
 
-    operator fun invoke(status: Status.() -> Unit){//
+    operator fun invoke(status: Status2.() -> Unit){//
 
     }
 
@@ -58,6 +58,8 @@ class Manager{
     operator fun invoke(value: String){
 
     }
+
+
 
 }
 
